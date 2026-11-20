@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Agassi</title>
+  <rect width="64" height="64" rx="18" fill="#ffda45"/>
+  <ellipse cx="26" cy="34" rx="11" ry="12" fill="none" stroke="#322650" stroke-width="7"/>
+  <path d="M37 22v24" fill="none" stroke="#322650" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="51" cy="45" r="4.5" fill="#d65b23"/>
+</svg>
