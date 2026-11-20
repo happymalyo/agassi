@@ -7,7 +7,7 @@ import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js';
 import type { OrbitControls as Controls } from 'three-stdlib';
 export type SceneProps={ paused:boolean; night:boolean; rotating:boolean; reset:number; onReady:()=>void };
 function Fox({paused,onReady}:{paused:boolean;onReady:()=>void}) {
- const gltf=useGLTF('/models/fox.glb');
+ const gltf=useGLTF(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/models/fox.glb`);
  const fox=useMemo(()=>clone(gltf.scene),[gltf.scene]);
  const mixer=useMemo(()=>new AnimationMixer(fox),[fox]);
  useEffect(()=>{
@@ -19,7 +19,7 @@ function Fox({paused,onReady}:{paused:boolean;onReady:()=>void}) {
  return <primitive object={fox} position={[.1,.13,1]} rotation={[0,-.65,0]} scale={1.25} />;
 }
 function Camp(){
- const {scene}=useGLTF('/models/camp.glb');
+ const {scene}=useGLTF(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/models/camp.glb`);
  useEffect(()=>{scene.traverse(o=>{if(o instanceof Mesh){o.castShadow=true;o.receiveShadow=true;}});},[scene]);
  return <primitive object={scene}/>;
 }
