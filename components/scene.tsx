@@ -16,7 +16,7 @@ function Fox({paused,onReady}:{paused:boolean;onReady:()=>void}) {
   return ()=>{mixer.stopAllAction();mixer.uncacheRoot(fox);};
  },[fox,gltf.animations,mixer,onReady]);
  useFrame((_,delta)=>{if(!paused)mixer.update(Math.min(delta,.05)*.75);});
- return <primitive object={fox} position={[.1,.13,1]} rotation={[0,-.65,0]} scale={1.25} />;
+ return <primitive object={fox} position={[.1,.13,1]} rotation={[0,-.65,0]} scale={1.5} />;
 }
 function Camp(){
  const {scene}=useGLTF(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/models/camp.glb`);

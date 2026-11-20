@@ -4,3 +4,4 @@ out/
 *.tsbuildinfo
 *.blend1
 .env*
+/next-env.d.ts
